@@ -7,13 +7,37 @@
 #include<vector>
 
 int main(){
-    Aqua_Area river("河流区","淡水",21.5);//淡水鱼区有泰国斗鱼、锦鲤、食人鱼
-    Aqua_Area sea("海洋区","海水",25.0);//海水区有海龟、海豚、蝠鲼、白鲸、水母
-    Land_Area polar("极地荒原区","苔原","极端寒冷干燥",-35.7,4.3);//极地区帝企鹅、北极熊
-    Land_Area temperate("温带森林区","温带落叶阔叶林","气候适宜 四季分明",25.6,25.4);//老虎、棕熊、金丝猴、红腹锦鸡
-    Land_Area tropical("热带雨林区","热带常绿阔叶林","气候炎热多雨",34.5,61.0);//金刚鹦鹉、变色龙、黑猩猩
+    //建立旅游业管理对象，设老年票10元，儿童票15元，成人票30元，家庭联票69元<75元（原价）
+    Tourism_Manage tourism_manage(10,15,30,69);
 
-    //到时候写好了add函数直接把相应的动物push_back到这几个对应类对象的vector容器里面
-    //开始先要求身份认证
+    /*到时候写好了add_animal函数直接把相应的动物push_back到这几个对应类对象的vector容器里面
+    例，向河流区添加泰国斗鱼：river.add_animal(),函数会询问得到需要的参数*/
 
+    //交互界面在此
+    int opt;
+    do{
+        cout<<"您好，欢迎来到假的动物园，请问您想..."<<endl;
+        cout<<"1.使用动物园系统   2.退出程序"<<endl;
+        cout<<"请选择（输入对应数字）：";
+        cin>>opt;
+        if(opt==1){
+        //开始先要求身份认证
+            int identity;
+            cout<<"欢迎使用动物园系统！请问您是..."<<endl;
+            cout<<"1.管理员   2.饲养员   3.游客"<<endl;
+            cout<<"请选择您的身份（输入相应数字）：";
+            cin>>identity;
+            switch(identity){
+            case 1:
+                
+            case 2:
+
+            case 3:
+
+            }
+        }
+    }while(opt!=2);
+    
+    
+    
 }
